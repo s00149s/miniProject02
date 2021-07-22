@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+.myButton {
+	box-shadow: 3px 4px 0px 0px #808080;
+
+	background-color:#000000;
+	border-radius:5px;
+	border:0px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+    vertical-align:middle;
+    width:15%;
+}
+.a{background:#000000; width:15%;}
+.b{background:#000000; width:15%;}
+.c{background:#000000; width:15%;}
+
+.myButton:hover {           <!--둘레 색상-->
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#FA8072;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+<!--버튼 올렸을떄 화살표-->
+.myButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.myButton span:after {
+  content: '\00bb';
+  position: relative;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.myButton:hover span {
+  padding-right: 25px;
+}
+.myButton:hover span:after {
+  opacity: 1; <!--투명도-->
+  right: 0;
+}
+
+    #test_btn1{
+        height: 30px;
+        width: 20%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        margin-right:-3px;
+    }
+
+   #test_btn2{
+        height: 30px;
+        width: 20%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-left:-3px;
+   }
+
+   #btn_group input{
+       border: 1px solid skyblue;
+       background-color: brown;
+       color: white;
+       padding: 5px;
+   }
+
+   #btn_group input:hover{
+       color:white;
+       background-color: darkorange;
+   }
+    #background{
+        background-color: gray;
+    }
+
+</style>
+<script>
+      function openA(obj) {
+      document.querySelector(".AAA").style.display = "block";
+      document.querySelector(".BBB").style.display = "none";
+      }
+      function openB(obj) {
+      document.querySelector(".BBB").style.display = "block";
+      document.querySelector(".AAA").style.display = "none";
+      }
+
+  </script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+    </script>
+
+</head>
+
+
+
+<body id="background">
+<div class="parent_head" >
+        {% load static %}
+        <a href="{% url 'gun:index' %}"><img class="tohome" src="{% static 'media/stop_gun2.png' %}" width="100%" height="300px" align="center"></a>
+    </div>
+    <br>
+    <div  align="left"><nav>
+    <button type="button" class="myButton" onClick="location.href='http://www.naver.com'"><span>Start</span></button>
+    <button class="myButton a" onclick=""><span>hello</span></button>
+    <button class="myButton b" onclick=""><span>hello</span></button>
+    <button class="myButton c" onclick=""><span>hello</span></button>
+
+</nav>
+    <br>
+	</div>
+    <div align="right"><nav>
+    <button type="button" class="myButton" onClick="location.href='http://www.naver.com'"><span>Start</span></button>
+    <button class="myButton a" onclick=""><span>hello</span></button>
+    <button class="myButton b" onclick=""><span>hello</span></button>
+    <button class="myButton c" onclick=""><span>hello</span></button>
+
+
+</nav>
+	</div>
+	<br>
+	<br>
+    <div>
+        <div id="btn_group" align="center">
+            <input type="button" class="aA" id="test_btn1" value="가나다라" onclick="openA(this)">
+
+            <input type="button" class="bB" id="test_btn2" value="에이비시디" onclick="openB(this)">
+        </div>
+        <br>
+<div align="center">
+            <div class="AAA all" style="display:inline-block;">
+                <img src="banana.png" width="400px" height="400px">
+                <img src="apple.png" width="400px" height="400px">
+            </div>
+            <div class="BBB all" style="display:none;">
+                {% load static %}
+                <iframe src ="{% static 'graph/md.html'%}" width="400px" height="400">
+                <img src="puppy.png" width="400px" height="400">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

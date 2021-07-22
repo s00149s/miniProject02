@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script>
+    function goSubHome(obj){
+    obj.action="{% url 'gun:unemployment' %}";
+    obj.submit();
+      }
+  </script>
+</head>
+
+
+<body>
+<form name="frmArticle">
+<input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
+<label for="main-navigation-toggle">
+  <span>
+  </span>
+</label>
+
+
+<nav id="main-navigation" class="nav-main">
+  <ul class="menu">
+    <li class="menu_item">
+      <a class="menu_link" >About</a>
+    </li>
+    <li class="menu_item">
+      <a class="menu_link" >Gun Violence</a>
+      <ul class="submenu">
+        <li class="menu_item">
+          <a class="menu_link" href="{% url 'gun:unemployment' %}">Unemployment rate</a>
+        </li>
+        <li class="menu_item">
+          <a class="menu_link" href="{% url 'gun:unemployment' %}" >Race</a>
+        </li>
+        <li class="menu_item">
+          <a class="menu_link" href="{% url 'gun:unemployment' %}">Birthrate</a>
+        </li>
+        <li class="menu_item">
+          <a class="menu_link" href="{% url 'gun:unemployment' %}">Education</a>
+      </ul>
+    </li>
+    <li class="menu_item">
+      <a class="menu_link">Result</a>
+    </li>
+  </ul>
+</nav>
+
+<main class="page-container">
+  <h1>Gun Violence Analysis by States</h1>
+</main>
+</form>
+</body>
+</html>
