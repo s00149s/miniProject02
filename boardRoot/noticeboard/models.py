@@ -1,5 +1,4 @@
 from django.db import models
-from django_matplotlib import MatplotlibFigureField
 
 
 class Home(models.Model):
@@ -9,6 +8,18 @@ class Home(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

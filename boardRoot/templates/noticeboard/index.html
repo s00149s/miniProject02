@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Home</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
   <script>
     function goSubHome(obj){
     obj.action="{% url 'gun:unemployment' %}";
@@ -36,17 +36,15 @@
           <a class="menu_link" href="{% url 'gun:unemployment' %}">Unemployment rate</a>
         </li>
         <li class="menu_item">
-          <a class="menu_link" href="{% url 'gun:unemployment' %}" >Race</a>
+          <a class="menu_link" href="{% url 'gun:race' %}" >Race</a>
         </li>
         <li class="menu_item">
-          <a class="menu_link" href="{% url 'gun:unemployment' %}">Birthrate</a>
+          <a class="menu_link" href="{% url 'gun:unemployment' %}">Poverty rate</a>
         </li>
-        <li class="menu_item">
-          <a class="menu_link" href="{% url 'gun:unemployment' %}">Education</a>
       </ul>
     </li>
     <li class="menu_item">
-      <a class="menu_link">Result</a>
+      <a class="menu_link" href="{% url 'gun:result' %}">Result</a>
     </li>
   </ul>
 </nav>
