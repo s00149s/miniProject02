@@ -70,16 +70,16 @@
         <div align="center">
              {% load static %}
                 <div class="white">
-                    <iframe src ="{% static 'map/white.html' %}" width="600px" height="400px"></iframe>
-                    <img src="{% static 'graph/white.png' %}" width="400px" height=400px">
+                    <iframe id="mwhite" src ="{% static 'map/white.html' %}" style="width:650px;height:450px;margin-bottom:35px;"></iframe>
+                    <img id="cwhite" src="{% static 'graph/white.png' %}" style="width:500px;height:500px;">
                 </div>
                 <div class="black" style="display:none">
-                    <iframe src = "{% static 'map/black.html' %}" width="600px" height="400px"></iframe>
-                    <img src="{% static 'graph/black.png' %}" width="400px" height=400px">
+                    <iframe id="mblack" src = "{% static 'map/black.html' %}" style="width:650px;height:450px;margin-bottom:35px;"></iframe>
+                    <img id="cblack" src="{% static 'graph/black.png' %}" style="width:500px;height:500px;padding-top:50px;">
                 </div>
                 <div class="asian" style="display:none">
-                    <iframe src = "{% static 'map/asian.html' %}" width="600px" height="400px"></iframe>
-                    <img src="{% static 'graph/asian.png' %}" width="400px" height=400px">
+                    <iframe id="masian" src = "{% static 'map/asian.html' %}" style="width:650px;height:450px;margin-bottom:35px;"></iframe>
+                    <img id="casian" src="{% static 'graph/asian.png' %}" style="width:500px;height:500px;padding-top:50px;">
                 </div>
         </div>
         </form>

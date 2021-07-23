@@ -217,6 +217,8 @@ button {
    color:white;
    background-color: darkorange;
 }
+
+
 .bgimg {
     /*background-image: url('../media/Deep Space.jpg');*/
     background: linear-gradient(#1c1a1a, #a6a3a2);
@@ -227,6 +229,33 @@ body {
     margin: 0;
 }
 
+/*******************
+********Result*******
+**********************/
 
+#result{
+    position: relative;
+    font-size: 30px;
+    color: white;
+
+
+
+}
+#text{
+    position: absolute;
+    bottom: -100px;
+    color: #444;
+    left: 15%;
+    padding: 24px 5%;
+    right: 15%;
+    border: 2px;
+
+
+}
+h2{
+    color: white;
+    background-color: silver;
+    font-size: 50px;
+}
 
 
