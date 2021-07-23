@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Race</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/race.css' %}">
+</head>
+<body>
+    <div class="parent_head" >
+        {% load static %}
+        <a href="{% url 'gun:index' %}"><img class="tohome" src="{% static 'media/stop_gun2.png' %}" width="100%" height="300px" align="center"></a>
+    </div>
+    <div class="bgimg">
+    <br>
+    <div  align="center">
+        <nav>
+            {% load static %}
+        <a type="button" class="myButton" href="{% url 'gun:intro' %}"><span>Intro</span></a>
+        <a class="myButton a" href="{% url 'gun:race' %}"><span>Race</span></a>
+        <a class="myButton b" href="{% url 'gun:poverty' %}"><span>Poverty Rate</span></a>
+        <a class="myButton c" href="{% url 'gun:unemployment' %}"><span>Unemployment Rate</span></a>
+        <a class="myButton d" href="{% url 'gun:result' %}"><span>Result</span></a>
+        </nav>
+    <br>
+	<br>
+	<br>
+    </div>
+    </div>
+
+</body>
+</html>

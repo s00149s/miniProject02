@@ -1,0 +1,101 @@
+/*********************************
+***************Race****************
+**********************************/
+
+.myButton {
+	box-shadow: 3px 4px 0px 0px #808080;
+	background-color:#434343;
+	border-radius:5px;
+	border:0px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+    vertical-align:middle;
+    width:18%;
+    margin: 10px;
+}
+.a{background:#434343;}
+.b{background:#434343;}
+.c{background:#434343;}
+.d{background:#434343;}
+
+.myButton:hover {           /*둘레 색상*/
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#FA8072;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+/* 버튼 올렸을떄 화살표 */
+.myButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.myButton span:after {
+  content: '\00bb';
+  position: relative;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.myButton:hover span {
+  padding-right: 25px;
+}
+.myButton:hover span:after {
+  opacity: 1; /* 투명도 */
+  right: 0;
+}
+
+#test_btn1{
+    height: 30px;
+    width: 20%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right:-3px;
+    font-size: 17px;
+}
+
+#test_btn2{
+    height: 30px;
+    width: 20%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left:-3px;
+    font-size: 17px;
+}
+
+#btn_group input{
+   border: 1px solid red;
+   background-color: brown;
+   color: white;
+   padding: 5px;
+   height : 40px;
+
+}
+
+#btn_group input:hover{
+   color:white;
+   background-color: darkorange;
+}
+.bgimg {
+    background-image: url('../media/Deep Space.jpg');
+    height: 800px;
+
+}
+body {
+    margin: 0;
+}
+
+
+
+
