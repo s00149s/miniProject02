@@ -31,8 +31,8 @@
             {% load static %}
         <a type="button" class="myButton" href="{% url 'gun:intro' %}"><span>Intro</span></a>
         <a class="myButton a" href="{% url 'gun:race' %}"><span>Race</span></a>
-        <a class="myButton b" href="{% url 'gun:poverty' %}"><span>Poverty Rate</span></a>
-        <a class="myButton c" href="{% url 'gun:unemployment' %}"><span>Unemployment Rate</span></a>
+        <a class="myButton b" href="{% url 'gun:unemployment' %}"><span>Unemployment Rate</span></a>
+        <a class="myButton c" href="{% url 'gun:poverty' %}"><span>Poverty Rate</span></a>
         <a class="myButton d" href="{% url 'gun:result' %}"><span>Result</span></a>
         </nav>
     <br>
@@ -41,22 +41,21 @@
 
         <div id="btn_group" align="center">
             <input type="button" class="aA" id="test_btn1" value="map" onclick="openA(this)">
-
             <input type="button" class="bB" id="test_btn2" value="chart" onclick="openB(this)">
         </div>
+
         <br>
-
-
+        <br>
         <div align="center">
              {% load static %}
             <div class="AAA all" style="display:inline-block;">
-                <iframe src ="{% static 'map/md.html' %}" width="600px" height="400px"></iframe>
-                <img src="{% static 'graph/asian_rate.png' %}" width="400px" height=400px">
+                <iframe src ="{% static 'map/poverty.html' %}" width="600px" height="400px"></iframe>
+                <img src="{% static 'graph/incident_vs_poverty.png' %}" width="400px" height=400px">
             </div>
-            <div class="BBB all" style="display:none;">
-                <iframe src ="{% static 'map/md.html' %}" width="600px" height="400px"></iframe>
-                <img src="{% static 'graph/asian_rate.png' %}" width="400px" height=400px">
-            </div>
+<!--            <div class="BBB all" style="display:none;">-->
+<!--                <iframe src ="{% static 'map/md.html' %}" width="600px" height="400px"></iframe>-->
+<!--                <img src="{% static 'graph/asian_rate.png' %}" width="400px" height=400px">-->
+<!--            </div>-->
         </div>
     </div>
     </div>

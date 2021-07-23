@@ -27,19 +27,19 @@
 <nav id="main-navigation" class="nav-main">
   <ul class="menu">
     <li class="menu_item">
-      <a class="menu_link" >About</a>
+      <a class="menu_link" href="{% url 'gun:intro' %}" >About</a>
     </li>
     <li class="menu_item">
       <a class="menu_link" >Gun Violence</a>
       <ul class="submenu">
         <li class="menu_item">
-          <a class="menu_link" href="{% url 'gun:unemployment' %}">Unemployment rate</a>
+          <a class="menu_link" href="{% url 'gun:race' %}">Race</a>
         </li>
         <li class="menu_item">
-          <a class="menu_link" href="{% url 'gun:race' %}" >Race</a>
+          <a class="menu_link" href="{% url 'gun:unemployment' %}" >Unemployment Rate</a>
         </li>
         <li class="menu_item">
-          <a class="menu_link" href="{% url 'gun:unemployment' %}">Poverty rate</a>
+          <a class="menu_link" href="{% url 'gun:poverty' %}">Poverty Rate</a>
         </li>
       </ul>
     </li>

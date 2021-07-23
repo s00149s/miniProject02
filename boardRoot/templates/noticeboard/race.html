@@ -7,14 +7,27 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/race.css' %}">
     <script>
-      function openA(obj) {
-      document.querySelector(".AAA").style.display = "block";
-      document.querySelector(".BBB").style.display = "none";
-      }
-      function openB(obj) {
-      document.querySelector(".BBB").style.display = "block";
-      document.querySelector(".AAA").style.display = "none";
-      }
+    function changeRace(){
+        let key = id_race.value;
+        if(key == "White"){
+        document.querySelector(".white").style.display = "block";
+        document.querySelector(".black").style.display = "none";
+        document.querySelector(".asian").style.display = "none";
+        }
+        if(key == "Asian") {
+        document.querySelector(".white").style.display = "none";
+        document.querySelector(".black").style.display = "none";
+        document.querySelector(".asian").style.display = "block";
+        }
+        if(key == "Black") {
+        document.querySelector(".white").style.display = "none";
+        document.querySelector(".black").style.display = "block";
+        document.querySelector(".asian").style.display = "none";
+        }
+    }
+
+
+
 
     </script>
 
@@ -31,35 +44,47 @@
             {% load static %}
         <a type="button" class="myButton" href="{% url 'gun:intro' %}"><span>Intro</span></a>
         <a class="myButton a" href="{% url 'gun:race' %}"><span>Race</span></a>
-        <a class="myButton b" href="{% url 'gun:poverty' %}"><span>Poverty Rate</span></a>
-        <a class="myButton c" href="{% url 'gun:unemployment' %}"><span>Unemployment Rate</span></a>
+        <a class="myButton b" href="{% url 'gun:unemployment' %}"><span>Unemployment Rate</span></a>
+        <a class="myButton c" href="{% url 'gun:poverty' %}"><span>Poverty Rate</span></a>
         <a class="myButton d" href="{% url 'gun:result' %}"><span>Result</span></a>
         </nav>
     <br>
-	<br>
+	<div class="combo" align="left">
+            <p style="font-size:14px; color: white; margin-bottom:10px;">Race Select</p>
+            <select id="id_race" name="race"  style="width: 120px; height: 30px;" onchange="changeRace()">
+                <option value="White">White</option>
+                <option value="Asian">Asian</option>
+                <option value="Black">Black</option>
+            </select>
+    </div>
 	<br>
 
         <div id="btn_group" align="center">
             <input type="button" class="aA" id="test_btn1" value="map" onclick="openA(this)">
-
             <input type="button" class="bB" id="test_btn2" value="chart" onclick="openB(this)">
         </div>
         <br>
         <br>
+        <br>
+        <form>
         <div align="center">
              {% load static %}
-            <div class="AAA all" style="display:inline-block;">
-                <iframe src ="{% static 'map/md.html' %}" width="600px" height="400px"></iframe>
-                <img src="{% static 'graph/asian_rate.png' %}" width="400px" height=400px">
-            </div>
-            <div class="BBB all" style="display:none;">
-                <iframe src ="{% static 'map/md.html' %}" width="600px" height="400px"></iframe>
-                <img src="{% static 'graph/asian_rate.png' %}" width="400px" height=400px">
-            </div>
+                <div class="white">
+                    <iframe src ="{% static 'map/white.html' %}" width="600px" height="400px"></iframe>
+                    <img src="{% static 'graph/white.png' %}" width="400px" height=400px">
+                </div>
+                <div class="black" style="display:none">
+                    <iframe src = "{% static 'map/black.html' %}" width="600px" height="400px"></iframe>
+                    <img src="{% static 'graph/black.png' %}" width="400px" height=400px">
+                </div>
+                <div class="asian" style="display:none">
+                    <iframe src = "{% static 'map/asian.html' %}" width="600px" height="400px"></iframe>
+                    <img src="{% static 'graph/asian.png' %}" width="400px" height=400px">
+                </div>
         </div>
+        </form>
     </div>
     </div>
-
 </body>
 
 </html>
