@@ -3,20 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Race</title>
+    <title>Poverty</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/race.css' %}">
-<!--    <script>-->
-<!--      function openA(obj) {-->
-<!--      document.querySelector(".AAA").style.display = "block";-->
-<!--      document.querySelector(".BBB").style.display = "none";-->
-<!--      }-->
-<!--      function openB(obj) {-->
-<!--      document.querySelector(".BBB").style.display = "block";-->
-<!--      document.querySelector(".AAA").style.display = "none";-->
-<!--      }-->
+    <script>
+      function openA(obj) {
+      document.querySelector(".AAA").style.display = "block";
+      document.querySelector(".race").style.display = "none";
+      }
+      function openB(obj) {
+      document.querySelector(".AAA").style.display = "none";
+      document.querySelector(".race").style.display = "block";
+      }
 
-<!--    </script>-->
+    </script>
 
 </head>
 <body>
@@ -38,13 +38,10 @@
     <br>
 	<br>
 	<br>
-
         <div id="btn_group" align="center">
             <input type="button" class="aA" id="test_btn1" value="map" onclick="openA(this)">
             <input type="button" class="bB" id="test_btn2" value="chart" onclick="openB(this)">
         </div>
-
-        <br>
         <br>
         <div align="center">
              {% load static %}
@@ -52,10 +49,13 @@
                 <iframe id="map" src ="{% static 'map/poverty.html' %}" style="width:650px;height:450px;margin-bottom:35px;"></iframe>
                 <img id="chart" src="{% static 'graph/poverty.png' %}" style="width:500px;height:500px;padding-top:50px;">
             </div>
-<!--            <div class="BBB all" style="display:none;">-->
-<!--                <iframe src ="{% static 'map/md.html' %}" width="600px" height="400px"></iframe>-->
-<!--                <img src="{% static 'graph/asian_rate.png' %}" width="400px" height=400px">-->
-<!--            </div>-->
+            <br>
+            <br>
+            <div class="race" style="display:none;">
+                <img id="white" src="{% static 'graph/white_pov.png' %}" style="width:500px;height:500px;">
+                <img id="asian" src="{% static 'graph/asian_pov.png' %}" style="width:500px;height:500px;">
+                <img id="black" src="{% static 'graph/black_pov.png' %}" style="width:500px;height:500px;">
+            </div>
         </div>
     </div>
     </div>
