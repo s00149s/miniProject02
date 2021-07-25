@@ -61,16 +61,17 @@
              {% load static %}
                 <div class="white">
                     <iframe id="mwhite" src ="{% static 'map/white.html' %}" style="width:650px;height:450px;margin-bottom:35px;"></iframe>
-                    <img id="cwhite" src="{% static 'graph/white.png' %}" style="width:500px;height:500px;">
-                </div>
-                <div class="black" style="display:none">
-                    <iframe id="mblack" src = "{% static 'map/black.html' %}" style="width:650px;height:450px;margin-bottom:35px;"></iframe>
-                    <img id="cblack" src="{% static 'graph/black.png' %}" style="width:500px;height:500px;">
+                    <img id="cwhite" src="{% static 'graph/white_pop.png' %}" style="width:500px;height:500px;">
                 </div>
                 <div class="asian" style="display:none">
                     <iframe id="masian" src = "{% static 'map/asian.html' %}" style="width:650px;height:450px;margin-bottom:35px;"></iframe>
-                    <img id="casian" src="{% static 'graph/asian.png' %}" style="width:500px;height:500px;">
+                    <img id="casian" src="{% static 'graph/asian_pop.png' %}" style="width:500px;height:500px;">
                 </div>
+                <div class="black" style="display:none">
+                    <iframe id="mblack" src = "{% static 'map/black.html' %}" style="width:650px;height:450px;margin-bottom:35px;"></iframe>
+                    <img id="cblack" src="{% static 'graph/black_pop.png' %}" style="width:500px;height:500px;">
+                </div>
+
         </div>
         </form>
     </div>

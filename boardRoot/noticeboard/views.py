@@ -11,10 +11,10 @@ def race(request):
     return render(request, 'noticeboard/race.html')
 
 def intro(request):
-    return render(request, 'noticeboard/intro.html')
+    return render(request, 'noticeboard/intro2.html')
 
 def result(request):
-    return render(request, 'noticeboard/result.html')
+    return render(request, 'noticeboard/result2.html')
 
 def poverty(request):
     return render(request, 'noticeboard/poverty.html')

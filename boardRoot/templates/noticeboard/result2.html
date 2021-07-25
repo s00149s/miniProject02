@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/race.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+        .logo {
+        font-family: 'Abel', sans-serif;
+        background-color : 'transparent';
+        }
+
+    </style>
+</head>
+<body>
+<div class="parent_head" >
+        {% load static %}
+        <a href="{% url 'gun:index' %}"><img class="tohome" src="{% static 'media/stop_gun2.png' %}" width="100%" height="300px" align="center"></a>
+    </div>
+	<div class="bgimg2">
+    <br>
+<!--    버튼 영역    -->
+     <div align="center">
+        <nav>
+            {% load static %}
+        <a type="button" class="myButton" href="{% url 'gun:intro' %}"><span>Intro</span></a>
+        <a class="myButton a" href="{% url 'gun:race' %}"><span>Race</span></a>
+        <a class="myButton b" href="{% url 'gun:poverty' %}"><span>Poverty Rate</span></a>
+        <a class="myButton c" href="{% url 'gun:unemployment' %}"><span>Unemployment Rate</span></a>
+        <a class="myButton d" href="{% url 'gun:result' %}"><span>Result</span></a>
+        </nav>
+    <br>
+    <br>
+    <br>
+     </div>
+    <div class="mcontent">
+        <div class="logo">
+            <div class="card">
+            <h2 class="logotitle" align="center" >
+                <span>RESULT</span>
+            </h2>
+            <br>
+            <br>
+            <hr style="width:80%">
+            <div class="resultimg">
+                <img class="img2" src="{% static 'media/aminext.jpg' %}">
+            </div>
+            <div class="resultxt">
+                <div id="row1">
+                <span>흑인 비율 및 빈곤율과 총기사건 간의 상관관계로 보아, 백인 남성들의 총기 규제에 대한 반대 시위는 곧 자기 방어를 위한</span>
+                <br>
+                </div>
+                <div id="row2">
+                <span> 것으로 보여짐.</span>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

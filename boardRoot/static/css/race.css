@@ -135,8 +135,6 @@ button {
 	font-family: Arial;
 }
 
-
-
 .myButton {
 	box-shadow: 3px 4px 0px 0px #808080;
 	background-color:#434343;
@@ -161,7 +159,7 @@ button {
 .d{background:#434343;}
 
 .myButton:hover {           /*둘레 색상*/
-	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background:linear-gradient(to bottom, #505050 5%, #828282 100%);
 	background-color:#FA8072;
 }
 .myButton:active {
@@ -220,7 +218,6 @@ button {
 
 
 .bgimg {
-    /*background-image: url('../media/Deep Space.jpg');*/
     background: linear-gradient(#1c1a1a, #a6a3a2);
     height: 1000px;
 
@@ -230,8 +227,13 @@ body {
 }
 
 /*******************
-********Result*******
+********Intro*******
 **********************/
+
+.section {
+    background-color: "none";
+}
+
 
 #result{
     position: relative;
@@ -252,10 +254,72 @@ body {
 
 
 }
-h2{
+.logotitle {
     color: white;
-    background-color: silver;
     font-size: 50px;
 }
 
+.logotitle span {
+    display: inline-block;
+    padding: 0 18px;
+    position: relative;
+    z-index: 2;
+}
 
+.img1 {
+    margin-top: 70px;
+    margin-left: 10%;
+    float: left;
+    width: 700px;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Nanum+Gothic+Coding&display=swap');
+
+.article {
+    font-family: 'Gothic A1', sans-serif;
+    color: white;
+    float: left;
+    margin-top: 75px;
+    margin-left: 50px;
+    font-size: 18px;
+
+}
+
+/*********************************
+***************Result****************
+**********************************/
+
+.bgimg2 {
+    background: linear-gradient(#1c1a1a, #a6a3a2);
+    height: 1300px;
+
+}
+
+
+.img2 {
+    align: center;
+    margin-top: 60px;
+    margin-left: 17%;
+    width: 1000px;
+
+}
+
+.resultxt {
+    font-family: 'Gothic A1', sans-serif;
+    color:#dcdcdc;
+    float: left;
+    margin-top: 30px;
+    margin-left: 17%;
+    font-size: 18px;
+
+}
+
+#row1 {
+    margin-bottom: 10px;
+}
+
+#row2 {
+
+    margin-top: 10px;
+}
