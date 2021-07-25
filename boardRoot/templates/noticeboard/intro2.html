@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/race.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+        .logo {
+        font-family: 'Abel', sans-serif;
+        background-color : 'transparent';
+        }
+
+    </style>
+</head>
+<body>
+<div class="parent_head" >
+        {% load static %}
+        <a href="{% url 'gun:index' %}"><img class="tohome" src="{% static 'media/stop_gun2.png' %}" width="100%" height="300px" align="center"></a>
+    </div>
+	<div class="bgimg">
+    <br>
+
+<!--    버튼 영역    -->
+     <div align="center">
+        <nav>
+            {% load static %}
+        <a type="button" class="myButton" href="{% url 'gun:intro' %}"><span>Intro</span></a>
+        <a class="myButton a" href="{% url 'gun:race' %}"><span>Race</span></a>
+        <a class="myButton b" href="{% url 'gun:poverty' %}"><span>Poverty Rate</span></a>
+        <a class="myButton c" href="{% url 'gun:unemployment' %}"><span>Unemployment Rate</span></a>
+        <a class="myButton d" href="{% url 'gun:result' %}"><span>Result</span></a>
+        </nav>
+    <br>
+    <br>
+    <br>
+     </div>
+
+<!--        main content 영역-->
+     <div class="mcontent">
+        <div class="logo">
+            <div class="card">
+            <h2 class="logotitle" align="center" >
+                <span>WHAT MATTERS</span>
+            </h2>
+            <br>
+            <br>
+            <hr style="width:80%">
+            <div class="introimg">
+                <img class="img1" src="{% static 'media/intro3.jpg' %}">
+            </div>
+            <div class="article">
+                <span>미국 독립기념일 연휴 3일간</span>
+                <br>
+                <br>
+                <span style="color:red; font-size:20px;"><b>총기 사고 사망자 최소 150명</span>
+                <br>
+                <br>
+                <span>동일 기간의</span>
+                <span style="color:red; font-size:20px;">코로나 사망자 78명의 2배</b></span>
+                <br>
+                <br>
+                <span style="color:white">거리로 나선 백인 남성들</span>
+                <br>
+                <br>
+                <span style="color:white">그들이 무장하고 거리로 나온 이유는</span>
+                <br>
+                <br>
+                <span>다름아닌</span>
+                <span style="background-color:red"><b>총기규제에 대한 반대 시위</b></span>
+                <br>
+                <br>
+                <span>그들은 총기 규제에 반대하는 이유는?</span>
+
+            </div>
+
+            </div>
+        </div>
+     </div>
+
+
+
+
+    </div>
+
+	<br>
+</body>
+</html>

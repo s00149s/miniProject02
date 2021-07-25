@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Race</title>
+    {% load static %}
+    <style>
+        #result{
+            position: relative;
+            font-size: 30px;
+            color: white;
+        }
+        #text{
+            position: absolute;
+            bottom: -100px;
+            color: #444;
+            left: 15%;
+            padding: 24px 5%;
+            right: 15%;
+            border: 2px;
+        }
+        h2{
+            color: white;
+            background-color: silver;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent_head" >
+        {% load static %}
+        <a href="{% url 'gun:index' %}"><img class="tohome" src="{% static 'media/stop_gun2.png' %}" width="100%" height="300px" align="center"></a>
+    </div>
+    <div class="bgimg">
+    <br>
+    <div  align="center">
+        <nav>
+            {% load static %}
+        <ul class="nav-container">
+        <li class="myButton"> <a href="{% url 'gun:intro' %}">Intro</a></li>
+        <li class="myButton a"><a href="{% url 'gun:race' %}">Race</a></li>
+        <li class="myButton b"><a href="{% url 'gun:poverty' %}">Poverty Rate</a></li>
+        <li class="myButton c"><a href="{% url 'gun:unemployment' %}">Unemployment Rate</a></li>
+        <li class="myButton d"><a href="{% url 'gun:result' %}">Result</a></li>
+
+        </ul>
+        </nav>
+    <br>
+	<br>
+    </div>
+    <div width="100%" height="550px">
+        <h2 class="hdr-primary hdr-primary-shaded-light-checked" align="center">
+            <span><font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">결론</font>
+            </font>
+            </span>
+        </h2>
+
+        <div id="result">
+
+            <img src="{% static 'media/result.jpeg' %}" width="100%" height="600px" align="center">
+            <div id="text">
+            <h3 ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">자기자신이 지킨다</font></font></h3>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">빈곤률과 흑인 비율이 높은 지역의 총기사고 수가 많고 </font><br>
+                    <font style="vertical-align: inherit;">불법등록 총기 수도 많아 짐으로써 </font><br>
+                    <font style="vertical-align: inherit;">인구 비율이 많은 백인들이 자기보호를 위해 총기규제를 반대하고 </font><br>
+                    <font style="vertical-align: inherit;">그로인해 자기방어를 위한 총기소지가 늘고있다.</font><br>
+                    <font style="vertical-align: inherit;">따라서 미국의 총기규제는 어려울 것이다.</font>
+                </font>
+
+            </p>
+            </div>
+        </div>
+
+    </div>
+	<br>
+
+    </div>
+
+
+
+</body>
+</html>
