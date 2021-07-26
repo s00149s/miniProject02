@@ -299,13 +299,14 @@ body {
 
 .img2 {
     align: center;
+    width: 850px;
+    display: block;
     margin-top: 60px;
-    margin-left: 17%;
-    width: 1000px;
-
+    margin-left: 21%;
 }
 
 .resultxt {
+
     font-family: 'Gothic A1', sans-serif;
     color:#dcdcdc;
     float: left;
