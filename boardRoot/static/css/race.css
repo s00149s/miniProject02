@@ -298,29 +298,35 @@ body {
 
 
 .img2 {
-    align: center;
-    width: 850px;
-    display: block;
+
     margin-top: 60px;
-    margin-left: 21%;
+    width: 850px;
+
 }
 
 .resultxt {
 
     font-family: 'Gothic A1', sans-serif;
     color:#dcdcdc;
-    float: left;
     margin-top: 30px;
-    margin-left: 17%;
     font-size: 18px;
+
+
+}
+
+.resultimg {
+
+    text-align: center;
 
 }
 
 #row1 {
     margin-bottom: 10px;
+
 }
 
 #row2 {
 
     margin-top: 10px;
+
 }
